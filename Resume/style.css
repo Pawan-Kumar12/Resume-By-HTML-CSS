@@ -1,103 +1,132 @@
 html{
 	box-sizing: border-box;
     padding: 0 15%;
-  }
+}
 
 *, *:before, *:after{
 		box-sizing: inherit;
-	}
+}
 
-a{
-        color:rgb(255,255,255, 0.8)
-    }
+body{
+    display: flex;
+    flex-direction: column;
+   
+}
 
-a:hover{
-        color: black;
-        transition: 1.5s;  /* hovering effect will be visiblw in 1.5 sec duration */
-    }
-
+header{
+    display: flex;
+    background-color: #ff5757;
+    color: black;
+    height: 100px;
+    justify-content: space-between;
+}
+header img:first-child{
+    float: left;
+}
+.name{
+    font-size: 2.3em; 
+    font-weight: bolder;
+ }
+ .designation{
+    font-size: 2em; 
+    font-weight: bolder;
+    padding-left: 20px;
+    color:black
+}
+.link{
+    float: right;
+}
+figure{
+    margin-right: -40px;
+}
+figcaption{
+    flex-wrap: nowrap;
+}
 h3{
     color: #ff5757;
 }
-
-pre{
-    font-family: 'Times New Roman',Georgia, Times, serif;
-    margin: -30px;
+.objective{
+    padding: 0 30px 0 30px;
 }
-
-pre h4{
-    margin: -10px;
-}
-
-h4{
-    margin-bottom: -5px;
-    margin-top: -5px;
-}
-
-/* CSS styling for header starts */
-.headcontainer{
-    width: auto;
-    background-color: #ff5757;
+main{
     display: flex;
-    color: white;
-    justify-content: space-between;
-    height: 15vh;
+    gap: 60px;
+    padding: 0 30px 0 30px;
 }
-.headcontainer img:first-child{
-    width: 8vw;
+main p{
+    width: 90%;
+    margin: 0;
 }
-.info{
-    font-size: 2.5em;
+main h4{
+    margin: 10px 0;
 }
-.info em:last-child{
-   font-size: 0.8em;
-   padding-left: 30px;
-   margin-top: -40px;
-}
-.link figure{
-    display: flex;
+.period{
+     float: right; 
+  }
+.courses p{
+    width: 110% !important;
 }
 
-/* CSS styling for header ends */
-/* CSS styling for body starts */
-
-.body{
-    padding: 0 20px;
-}
-.flex-box{
-    display: flex;
-    justify-content: space-between;
-}
-.flex-item1{
-    flex: 0 0.8 440px;
-    margin-right: 50px;
-}
-.flex-item2{
-    flex: 0 0.5 430px;
-}
-.courses{
-    line-height: 22px;
-}
-
-/* CSS styling for body ends */
-/* CSS styling for footer starts */
 footer{
-    background-color: #ff5757;
     display: flex;
+    background-color: #ff5757;
     justify-content: space-between;
-    bottom: 0;
+    margin-top: 30px;
 }
-
 footer p:first-child{
-    align-self: flex-start;
     margin-top: 0;
 }
-
 footer p:nth-child(2){
-    align-self: flex-end;
+    margin-top: 30px;
     margin-bottom: 0;
 }
+footer a{
+    color: black;
+    text-decoration: none;
+}
 
-footer address{
-    color: white;
+
+/* Responsive through media query */
+
+@media screen and (width < 991px){
+    .name{
+        font-size: 1.8em; 
+        font-weight: bolder;
+     }
+     .designation{
+        font-size: 1em; 
+        font-weight: bolder;
+        padding-left: 20px;
+        color:black
+    }
+}
+
+@media screen and (width < 815px){
+    header{
+        display: flex;
+        flex-direction: column;
+        background-color: #ff5757;
+        color: black;
+        height: fit-content;
+    }
+     .link{
+        margin-left: -30px !important;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 0 30px 0 30px;
+    
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        background-color: #ff5757;
+        margin-top: 30px;
+    }
+    footer p:nth-child(2){
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 }
